@@ -5,15 +5,19 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import eetu.rouhiainen.parliamentapp.MyApp
+import eetu.rouhiainen.parliamentapp.MyApp.App.Companion.appContext
 
 @Database(entities = [Member::class], version = 1, exportSchema = false)
 abstract class ParliamentDB: RoomDatabase() {
     abstract val parliamentDao: ParliamentDao
+
+
+
     companion object {
         @Volatile
         private var INSTANCE: ParliamentDB? = null
         // context comes from MyApp, may also be provided as parameter
-        fun getInstance(context: Context = MyApp.appContext): ParliamentDB {
+        fun getInstance(context: Context = appContext): ParliamentDB {
             synchronized(this) {
                 var instance =
                     INSTANCE
