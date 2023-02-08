@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import androidx.lifecycle.Observer
+import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
 import eetu.rouhiainen.parliamentapp.MyApp.Companion.appContext
 import eetu.rouhiainen.parliamentapp.data.ParliamentApi
 import eetu.rouhiainen.parliamentapp.data.ParliamentDB
@@ -23,12 +25,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        addMembers()
-
+        addMembersToDB()
     }
 
 
-    private fun addMembers() {
+    private fun addMembersToDB() {
         GlobalScope.launch(
             Dispatchers.IO,
             CoroutineStart.DEFAULT) {
