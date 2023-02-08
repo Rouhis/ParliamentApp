@@ -1,42 +1,20 @@
 package eetu.rouhiainen.parliamentapp.data
 
+
+import android.content.Context
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.Transformations
+import eetu.rouhiainen.parliamentapp.MyApp.Companion.appContext
+
 
 object ParliamentRepo {
 
-    suspend fun addMember(
-        hetekaId: Int,
-        seatNumber: Int,
-        lastname: String,
-        firstname: String,
-        party: String,
-        minister: Boolean,
-        pictureUrl: String,
+    fun getMembers(): LiveData<List<Member>> = ParliamentDB.getInstance(appContext).parliamentDao.getAll()
 
-    ) {
-        ParliamentDB.getInstance()
-            .parliamentDao
-            .insertOrUpdate(
-                Member(
-                    hetekaId,
-                    seatNumber,
-                    lastname,
-                    firstname,
-                    party,
-                    minister,
-                    pictureUrl,
-                )
-            )
-    }
-
-    fun getMemberByHetekaId(ID: Int) {
-        ParliamentDB.getInstance()
-            .parliamentDao
-            .getByhetekaId(ID)
-    }
-
-
-    fun getPlayers(): LiveData<List<Member>> = ParliamentDB.getInstance().parliamentDao.getAll()
+    fun getParties(): LiveData<List<String>> =
+        Transformations.map(ParliamentDB.getInstance(appContext).parliamentDao.getParties()) { parties ->
+            parties.map { it.party }
+        }
 
 
 }

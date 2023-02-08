@@ -1,11 +1,12 @@
 package eetu.rouhiainen.parliamentapp.data
 
+
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import eetu.rouhiainen.parliamentapp.MyApp
-import eetu.rouhiainen.parliamentapp.MyApp.App.Companion.appContext
+import eetu.rouhiainen.parliamentapp.MyApp.Companion.appContext
+
 
 @Database(entities = [Member::class], version = 1, exportSchema = false)
 abstract class ParliamentDB: RoomDatabase() {

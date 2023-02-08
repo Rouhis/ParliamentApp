@@ -1,4 +1,4 @@
-package eetu.rouhiainen.parliamentapp.ViewModels
+package eetu.rouhiainen.parliamentapp.viewmodels
 
 class MemberListViewModel {
 }

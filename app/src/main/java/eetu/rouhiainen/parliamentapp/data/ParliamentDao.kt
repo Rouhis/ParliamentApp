@@ -18,4 +18,10 @@ interface ParliamentDao {
 
     @Query("SELECT * FROM members_table WHERE hetekaId=:id")
     fun getByhetekaId(id: Int): LiveData<List<Member>>
+
+    @Query("SELECT * FROM members_table GROUP BY party")
+    fun getParties(): LiveData<List<Member>>
+
+    @Query("select * from members_table")
+    fun getAllNormal(): List<Member>
 }

@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/partyListFragment">
 
+    <fragment
+        android:id="@+id/partyListFragment"
+        android:name="eetu.rouhiainen.parliamentapp.fragments.PartyListFragment"
+        android:label="PartyListFragment" >
+
+        <action
+            android:id="@+id/action_partyListFragment_to_memberListFragment"
+            app:destination="@id/memberListFragment" />
+        <argument
+            android:name="party"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/memberListFragment"
+        android:name="eetu.rouhiainen.parliamentapp.fragments.MemberListFragment"
+        android:label="fragment_member_list"
+        tools:layout="@layout/fragment_member_list" >
+        <action
+            android:id="@+id/action_memberListFragment_to_memberFragment"
+            app:destination="@id/memberFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/memberFragment"
+        android:name="eetu.rouhiainen.parliamentapp.fragments.MemberFragment"
+        android:label="fragment_member"
+        tools:layout="@layout/fragment_member" />
 </navigation>

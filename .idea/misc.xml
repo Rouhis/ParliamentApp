@@ -4,10 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/eetur/Code/ParliamentApp/app/src/main/res/layout/activity_main.xml" value="0.1762917933130699" />
+        <entry key="..\:/Users/eetur/Code/ParliamentApp/app/src/main/res/layout/activity_main2.xml" value="0.228125" />
+        <entry key="..\:/Users/eetur/Code/ParliamentApp/app/src/main/res/layout/activity_test.xml" value="0.2463768115942029" />
         <entry key="..\:/Users/eetur/Code/ParliamentApp/app/src/main/res/layout/fragment_member.xml" value="0.21829710144927536" />
         <entry key="..\:/Users/eetur/Code/ParliamentApp/app/src/main/res/layout/fragment_member_list.xml" value="0.3109375" />
-        <entry key="..\:/Users/eetur/Code/ParliamentApp/app/src/main/res/layout/fragment_party_list.xml" value="0.3109375" />
+        <entry key="..\:/Users/eetur/Code/ParliamentApp/app/src/main/res/layout/fragment_party_list.xml" value="0.33" />
         <entry key="..\:/Users/eetur/Code/ParliamentApp/app/src/main/res/layout/recyler_item.xml" value="0.25427350427350426" />
+        <entry key="..\:/Users/eetur/Code/ParliamentApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.142" />
       </map>
     </option>
   </component>
