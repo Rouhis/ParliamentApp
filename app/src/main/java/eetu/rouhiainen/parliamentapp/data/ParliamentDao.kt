@@ -22,6 +22,6 @@ interface ParliamentDao {
     @Query("SELECT * FROM members_table GROUP BY party")
     fun getParties(): LiveData<List<Member>>
 
-    @Query("select * from members_table")
-    fun getAllNormal(): List<Member>
+    @Query("select * from members_table WHERE party=:partyName")
+    fun getMembersByParty(partyName: String): LiveData<List<Member>>
 }

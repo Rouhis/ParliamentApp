@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import eetu.rouhiainen.parliamentapp.R
+import eetu.rouhiainen.parliamentapp.fragments.PartyListFragmentDirections
 
 
 /**
@@ -62,13 +63,14 @@ class PartyListAdapter(private val context: Context, var parties: LiveData<List<
      * Binds the data for an item to the view holder.
      *
      * @param holder The view holder for the item.
-     * @param i The position of the item in the list.
+     * @param pos The position of the item in the list.
      */
-    override fun onBindViewHolder(holder: PartiesViewHolder, i: Int) {
+    override fun onBindViewHolder(holder: PartiesViewHolder, pos: Int) {
         (holder.itemView as TextView).apply {
-            text = parties.value?.get(i)
+            text = parties.value?.get(pos)
             setOnClickListener {
-                println(parties.value?.get(i))
+               val action = PartyListFragmentDirections.actionPartyListFragmentToMemberListFragment(text.toString())
+                it.findNavController().navigate(action)
             }
         }
     }

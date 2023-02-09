@@ -13,9 +13,6 @@
         <action
             android:id="@+id/action_partyListFragment_to_memberListFragment"
             app:destination="@id/memberListFragment" />
-        <argument
-            android:name="party"
-            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/memberListFragment"
@@ -23,8 +20,12 @@
         android:label="fragment_member_list"
         tools:layout="@layout/fragment_member_list" >
         <action
+            android:name="party1"
             android:id="@+id/action_memberListFragment_to_memberFragment"
             app:destination="@id/memberFragment" />
+        <argument
+            android:name="partyName"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/memberFragment"

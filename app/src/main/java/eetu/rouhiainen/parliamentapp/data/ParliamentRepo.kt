@@ -1,7 +1,5 @@
 package eetu.rouhiainen.parliamentapp.data
 
-
-import android.content.Context
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Transformations
 import eetu.rouhiainen.parliamentapp.MyApp.Companion.appContext
@@ -15,6 +13,7 @@ object ParliamentRepo {
         Transformations.map(ParliamentDB.getInstance(appContext).parliamentDao.getParties()) { parties ->
             parties.map { it.party }
         }
-
-
 }
+
+
+
