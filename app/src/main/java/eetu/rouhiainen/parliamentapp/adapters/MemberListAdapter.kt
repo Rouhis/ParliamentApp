@@ -12,6 +12,13 @@ import androidx.recyclerview.widget.RecyclerView
 import eetu.rouhiainen.parliamentapp.R
 import eetu.rouhiainen.parliamentapp.fragments.MemberListFragmentDirections
 
+/**
+ * Eetu Rouhiainen
+ * 2113716
+ * 6.3.2023
+ *
+ * Memberlist adapter onBindViewHolder to
+ * */
 class MemberViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
 class MemberListAdapter(private val context: Context, var members: List<String>) :
@@ -30,14 +37,13 @@ class MemberListAdapter(private val context: Context, var members: List<String>)
         (holder.itemView as TextView).apply {
             text = members[pos]
             setOnClickListener {
-                val action = MemberListFragmentDirections.actionMemberListFragmentToMemberFragment()
+                val action = MemberListFragmentDirections.actionMemberListFragmentToMemberFragment(text.toString())
                 it.findNavController().navigate(action)
             }
         }
     }
 }
-// DiffUtil is a utility class that calculates the difference between two lists and outputs a list of update operations that converts the first list into the second one
-// The callback that acts as a gateway to the backing list data
+
 class MemberDiffCallback : DiffUtil.ItemCallback<String>() {
     override fun areItemsTheSame(old: String, new: String): Boolean {
         return old == new

@@ -61,15 +61,49 @@ class PartyListAdapter(private val context: Context, var parties: LiveData<List<
 
     /**
      * Binds the data for an item to the view holder.
-     *
+     * Depending on the value sets the party its full name
+     * Onclicklistener calls the navigation component and sets it depending on the party
      * @param holder The view holder for the item.
      * @param pos The position of the item in the list.
      */
     override fun onBindViewHolder(holder: PartiesViewHolder, pos: Int) {
         (holder.itemView as TextView).apply {
             text = parties.value?.get(pos)
+            val text2:String = text.toString()
+            if (text2 == "kd"){
+                text = "Kristillisdemokraatit"
+            }else if (text2 == "kesk"){
+                text= "Keskusta"
+            }else if (text2 == "kok"){
+                text= "Kokoomus"
+            }
+            else if (text2 == "liik"){
+                text= "Liike Nyt"
+            }
+
+            else if (text2 == "ps"){
+                text= "Perussuomalaiset"
+            }
+            else if (text2 == "r"){
+                text= "RKP"
+            }
+            else if (text2 == "sd"){
+                text= "Sosiaalidemokraattinen Puolue"
+            }
+            else if (text2 == "vas"){
+                text= "Vasemmistoliitto"
+            }
+            else if (text2 == "vihr"){
+                text= "Vihreät"
+            }
+            else if (text2 == "vkk"){
+                text= "Valta kuuluu kansalle"
+            }
+            else if (text2 == "wr"){
+                text= "Eduskuntaryhmä Wille Rydman"
+            }
             setOnClickListener {
-               val action = PartyListFragmentDirections.actionPartyListFragmentToMemberListFragment(text.toString())
+               val action = PartyListFragmentDirections.actionPartyListFragmentToMemberListFragment(text2)
                 it.findNavController().navigate(action)
             }
         }

@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/eetur/Code/ParliamentApp/app/src/main/res/drawable/back.xml" value="0.239" />
+        <entry key="..\:/Users/eetur/Code/ParliamentApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/Users/eetur/Code/ParliamentApp/app/src/main/res/layout/activity_main.xml" value="0.1762917933130699" />
         <entry key="..\:/Users/eetur/Code/ParliamentApp/app/src/main/res/layout/activity_main2.xml" value="0.228125" />
         <entry key="..\:/Users/eetur/Code/ParliamentApp/app/src/main/res/layout/activity_test.xml" value="0.2463768115942029" />

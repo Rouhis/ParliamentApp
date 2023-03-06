@@ -9,7 +9,6 @@ import androidx.room.Query
 @Dao
 interface ParliamentDao {
 
-
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertOrUpdate(Member: Member)
 

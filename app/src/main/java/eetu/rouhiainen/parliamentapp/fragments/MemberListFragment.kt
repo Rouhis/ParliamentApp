@@ -23,11 +23,7 @@ import eetu.rouhiainen.parliamentapp.viewmodels.MemberListViewModel
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [MemberListFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
+
 class MemberListFragment : Fragment() {
     private lateinit var memberViewModel: MemberListViewModel
     private lateinit var adapter: MemberListAdapter
@@ -42,13 +38,13 @@ class MemberListFragment : Fragment() {
         memberViewModel = ViewModelProvider(this)[MemberListViewModel::class.java]
 
         memberViewModel.membersOfParty.observe(viewLifecycleOwner, Observer {
-            adapter = MemberListAdapter(requireContext(), memberViewModel.extractMembers(it, partyName))
+            adapter = MemberListAdapter(requireContext(), memberViewModel.takeOutMembers(it, partyName))
             binding.memberList.adapter = adapter
         })
 
         binding.memberList.layoutManager = LinearLayoutManager(activity)
 
-        (activity as AppCompatActivity).supportActionBar?.title = "Members of the party"
+        (activity as AppCompatActivity).supportActionBar?.title = "Members"
 
         return binding.root
     }

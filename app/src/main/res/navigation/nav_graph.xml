@@ -31,5 +31,9 @@
         android:id="@+id/memberFragment"
         android:name="eetu.rouhiainen.parliamentapp.fragments.MemberFragment"
         android:label="fragment_member"
-        tools:layout="@layout/fragment_member" />
+        tools:layout="@layout/fragment_member" >
+        <argument
+            android:name="membername"
+            app:argType="string" />
+    </fragment>
 </navigation>
