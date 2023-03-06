@@ -1,5 +1,10 @@
 package eetu.rouhiainen.parliamentapp.fragments
-
+/**
+ * Eetu Rouhiainen
+ * 2113716
+ * 06.03.2023
+ *
+ * */
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -20,7 +25,10 @@ import eetu.rouhiainen.parliamentapp.viewmodels.MemberListViewModel
 import eetu.rouhiainen.parliamentapp.viewmodels.MemberViewModel
 
 
-
+/**
+ * Creates the view for the fragment and sets up the binding, view model, adapter, and title.
+ * @return The view for the fragment.
+ */
 class MemberFragment : Fragment() {
     private lateinit var memberViewModel: MemberViewModel
 
@@ -28,7 +36,7 @@ class MemberFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+
         val binding = DataBindingUtil.inflate<FragmentMemberBinding>(
             inflater, R.layout.fragment_member, container, false)
 

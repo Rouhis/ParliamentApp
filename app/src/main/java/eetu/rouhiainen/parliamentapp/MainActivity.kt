@@ -1,5 +1,10 @@
 package eetu.rouhiainen.parliamentapp
-
+/**
+ * Eetu Rouhiainen
+ * 2113716
+ * 06.03.2023
+ *
+ * */
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -27,11 +32,16 @@ class MainActivity : AppCompatActivity() {
         addMembersToDB()
 
     }
+    /**
+     * Needed for the navigation controller
+     * */
     override fun onSupportNavigateUp(): Boolean {
         return navController.navigateUp() || super.onSupportNavigateUp()
     }
 
-
+/**
+ * Used to add members to the database
+ * */
     private fun addMembersToDB() {
         GlobalScope.launch(
             Dispatchers.IO,

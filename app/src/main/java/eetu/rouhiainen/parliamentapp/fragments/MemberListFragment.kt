@@ -1,5 +1,10 @@
 package eetu.rouhiainen.parliamentapp.fragments
-
+/**
+ * Eetu Rouhiainen
+ * 2113716
+ * 06.03.2023
+ *
+ * */
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -17,12 +22,10 @@ import eetu.rouhiainen.parliamentapp.adapters.MemberViewHolder
 import eetu.rouhiainen.parliamentapp.adapters.PartyListAdapter
 import eetu.rouhiainen.parliamentapp.databinding.FragmentMemberListBinding
 import eetu.rouhiainen.parliamentapp.viewmodels.MemberListViewModel
-
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
+/**
+ * Creates the view for the fragment and sets up the binding, view model, adapter, and title.
+ * @return The view for the fragment.
+ */
 
 class MemberListFragment : Fragment() {
     private lateinit var memberViewModel: MemberListViewModel

@@ -1,5 +1,10 @@
 package eetu.rouhiainen.parliamentapp.data
-
+/**
+ * Eetu Rouhiainen
+ * 2113716
+ * 06.03.2023
+ *
+ * */
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Transformations
 import eetu.rouhiainen.parliamentapp.MyApp.Companion.appContext

@@ -1,5 +1,10 @@
 package eetu.rouhiainen.parliamentapp.data
-
+/**
+ * Eetu Rouhiainen
+ * 2113716
+ * 06.03.2023
+ *
+ * */
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import retrofit2.Retrofit

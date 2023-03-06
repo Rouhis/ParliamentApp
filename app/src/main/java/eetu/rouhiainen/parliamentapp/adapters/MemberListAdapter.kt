@@ -32,7 +32,11 @@ class MemberListAdapter(private val context: Context, var members: List<String>)
     override fun getItemCount(): Int {
         return members.size
     }
-
+    /**
+     * Binds the data for an item to the view holder.
+     * @param holder The view holder for the item.
+     * @param pos The position of the item in the list.
+     */
     override fun onBindViewHolder(holder: MemberViewHolder, pos: Int) {
         (holder.itemView as TextView).apply {
             text = members[pos]
