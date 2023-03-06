@@ -16,8 +16,6 @@ import eetu.rouhiainen.parliamentapp.fragments.MemberListFragmentDirections
  * Eetu Rouhiainen
  * 2113716
  * 6.3.2023
- *
- * Memberlist adapter onBindViewHolder to
  * */
 class MemberViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
