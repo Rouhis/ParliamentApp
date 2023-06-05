@@ -1,0 +1,2 @@
+# ParliamentApp
+This parliament application was made by Eetu Rouhiainen as a school project for metropolia. The application gets data from https://avoindata.eduskunta.fi/#/fi/home and shows a list of parliament parties according to the data. Then user can click a party and he will be shown the members of that party. Then user can click a member and a view opens where the user can see the member's photo and some information about the member.
